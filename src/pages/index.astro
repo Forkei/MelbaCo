@@ -5,28 +5,20 @@ import { siteImages } from '../config/images';
 ---
 
 <Layout title="Accueil">
-  <!-- Hero Section -->
-  <section class="relative h-screen flex items-center justify-center overflow-hidden">
-    <!-- Background Image -->
-    <div class="absolute inset-0">
-      <Image
-        src={siteImages.homepage.hero}
-        alt="Océan"
-        class="w-full h-full object-cover"
-        loading="eager"
-        fallback={siteImages.fallback.hero}
-      />
-      <div class="absolute inset-0 bg-gradient-to-b from-blue-900/60 via-blue-700/50 to-blue-500/40">
-        <div class="absolute inset-0 bg-black/30"></div>
-      </div>
-      <!-- Animated Wave Effect -->
-      <svg class="absolute bottom-0 w-full" viewBox="0 0 1440 320" fill="white">
-        <path fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,138.7C960,139,1056,117,1152,106.7C1248,96,1344,96,1392,96L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-      </svg>
-    </div>
-    
-    <!-- Hero Content -->
-    <div class="relative z-10 text-center text-white px-4 animate-fade-in">
+  <!-- Hero Image - Clean, no overlay -->
+  <section class="w-full">
+    <Image
+      src={siteImages.homepage.coralReef1}
+      alt="Récif corallien"
+      class="w-full h-auto"
+      loading="eager"
+      fallback={siteImages.fallback.hero}
+    />
+  </section>
+
+  <!-- Hero Content - Separate section below -->
+  <section class="py-16 bg-ocean-blue text-white text-center">
+    <div class="container mx-auto px-4 animate-fade-in">
       <h1 class="font-heading font-bold text-5xl md:text-7xl mb-6">
         Protégeons Nos Océans
       </h1>
@@ -88,6 +80,17 @@ import { siteImages } from '../config/images';
         </div>
       </div>
     </div>
+  </section>
+
+  <!-- Coral Reef Divider Image 2 -->
+  <section class="w-full">
+    <Image
+      src={siteImages.homepage.coralReef2}
+      alt="Récif corallien"
+      class="w-full h-auto"
+      loading="lazy"
+      fallback={siteImages.fallback.hero}
+    />
   </section>
 
   <!-- Naissance de Melba&Co Section -->
@@ -270,6 +273,17 @@ import { siteImages } from '../config/images';
         </p>
       </div>
     </div>
+  </section>
+
+  <!-- Coral Reef Divider Image 3 -->
+  <section class="w-full">
+    <Image
+      src={siteImages.homepage.coralReef3}
+      alt="Récif corallien"
+      class="w-full h-auto"
+      loading="lazy"
+      fallback={siteImages.fallback.hero}
+    />
   </section>
 
   <!-- Action Areas Section -->

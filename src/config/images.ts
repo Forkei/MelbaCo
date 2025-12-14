@@ -15,6 +15,9 @@ export const siteImages = {
     testimonial2: '/images/uploads/testimonial-2.jpg', // Photo du deuxième témoignage
     benjaminPortrait: '/images/uploads/benjamin-portrait.jpg', // Photo de Benjamin
     melbaBoat: '/images/uploads/melba-boat.png', // Photo du bateau Melba ou de la famille
+    coralReef1: '/images/uploads/coral-reef-1.jpg', // Récif corallien © Martin Colognoli
+    coralReef2: '/images/uploads/coral-reef-2.jpg', // Récif corallien © Martin Colognoli
+    coralReef3: '/images/uploads/coral-reef-3.jpg', // Récif corallien © Martin Colognoli
   },
 
   // Images de la page Missions
