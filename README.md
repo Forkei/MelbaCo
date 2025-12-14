@@ -1,6 +1,10 @@
-# Planète Mer
+# Melba&Co
 
-Site web de l'association Planète Mer pour la protection des océans.
+Site web de l'association Melba&Co pour la protection des océans.
+
+## 🌊 À propos
+
+Melba&Co est une association d'intérêt général fondée par Benjamin, 11 ans, passionné de plongée et de protection des océans. Le nom vient du bateau de ses grands-parents.
 
 ## 🚀 Développement
 
@@ -9,35 +13,22 @@ npm install
 npm run dev
 ```
 
-## 📝 Éditer le contenu
-
-### Articles de blog
-1. Aller sur GitHub.com → ce repository
-2. Naviguer vers `src/content/blog/`
-3. Cliquer "Add file" → "Create new file"
-4. Utiliser ce format :
-
-```markdown
----
-title: "Titre de l'article"
-description: "Description courte"
-publishDate: 2024-03-15
-author: "Nom de l'auteur"  
-tags: ["tag1", "tag2"]
----
-
-Contenu de l'article...
-```
-
-5. Sauvegarder → Le site se met à jour automatiquement
-
 ## 🎨 Structure
 
 - `src/pages/` - Pages du site
 - `src/components/` - Composants réutilisables
 - `src/content/blog/` - Articles de blog
-- `public/` - Fichiers statiques
+- `public/images/uploads/` - Images du site
+
+## 📷 Crédits photos
+
+Photos de récifs coralliens © [Martin Colognoli](https://www.martincolognoli.com)
 
 ## 🌐 Déploiement
 
 Automatique via Netlify à chaque push sur `main`.
+
+## 🔗 Liens
+
+- [Site web](https://melba-co.netlify.app)
+- [GitHub](https://github.com/Forkei/MelbaCo)
