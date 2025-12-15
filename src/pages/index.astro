@@ -5,29 +5,44 @@ import { siteImages } from '../config/images';
 ---
 
 <Layout title="Accueil">
-  <!-- Hero Image - Clean, no overlay -->
-  <section class="w-full">
-    <Image
-      src={siteImages.homepage.coralReef1}
-      alt="Récif corallien"
-      class="w-full h-auto"
-      loading="eager"
-      fallback={siteImages.fallback.hero}
-    />
-  </section>
-
-  <!-- Hero Content - Separate section below -->
-  <section class="py-16 bg-ocean-blue text-white text-center">
-    <div class="container mx-auto px-4 animate-fade-in">
-      <h1 class="font-heading font-bold text-5xl md:text-7xl mb-6">
-        Protégeons Nos Océans
-      </h1>
-      <p class="font-body text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-        Ensemble pour un avenir durable des écosystèmes marins
-      </p>
-      <a href="#introduction" class="inline-block bg-primary-orange text-ocean-blue px-8 py-4 rounded-lg font-body font-semibold text-lg hover:bg-yellow-500 transform hover:scale-105 transition-all shadow-xl">
-        Découvrir notre mission
-      </a>
+  <!-- Hero Section with Image and Introduction -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <div class="grid md:grid-cols-2 gap-12 items-center animate-on-scroll">
+        <!-- Image -->
+        <div>
+          <Image
+            src={siteImages.homepage.coralReef1}
+            alt="Récif corallien"
+            class="w-full h-80 md:h-96 object-cover rounded-xl shadow-xl"
+            loading="eager"
+            fallback={siteImages.fallback.hero}
+          />
+        </div>
+        <!-- Text -->
+        <div class="font-body text-gray-700 leading-relaxed space-y-4">
+          <p class="uppercase tracking-wide text-primary-orange font-semibold text-sm">
+            Melba&Co est une association d'intérêt général
+          </p>
+          <h1 class="font-heading font-bold text-3xl md:text-4xl text-ocean-blue">
+            Protégeons Nos Océans
+          </h1>
+          <p class="text-lg">
+            Ensemble pour un avenir durable des écosystèmes marins. Notre mission : agir tous ensemble, pour retrouver un équilibre durable entre la vie marine et les activités humaines.
+          </p>
+          <p>
+            C'est bien l'enjeu du 21e siècle : concilier à la fois <strong class="text-ocean-blue">respect des équilibres naturels fondamentaux</strong> et <strong class="text-ocean-blue">développement économique et social</strong>.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 mt-4">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfocGroCTOyaHb7bCkQD6U3wyMLmR40V1IbiR_5U4fWjsFrSw/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="inline-block bg-donate-red text-white px-6 py-3 rounded-lg font-body font-semibold hover:bg-red-700 transform hover:scale-105 transition-all shadow-lg">
+              REJOINDRE L'ASSOCIATION
+            </a>
+            <a href="#introduction" class="inline-block bg-primary-orange text-ocean-blue px-6 py-3 rounded-lg font-body font-semibold hover:bg-yellow-500 transform hover:scale-105 transition-all shadow-lg">
+              Découvrir notre mission
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -59,6 +74,9 @@ import { siteImages } from '../config/images';
             <p class="text-xl font-heading font-bold text-primary-orange">
               Alors, tu rejoins mon association ?
             </p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfocGroCTOyaHb7bCkQD6U3wyMLmR40V1IbiR_5U4fWjsFrSw/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="inline-block bg-donate-red text-white px-6 py-3 rounded-lg font-body font-semibold hover:bg-red-700 transform hover:scale-105 transition-all shadow-lg mt-4">
+              REJOINDRE L'ASSOCIATION
+            </a>
           </div>
         </div>
         <!-- Image -->
@@ -82,15 +100,35 @@ import { siteImages } from '../config/images';
     </div>
   </section>
 
-  <!-- Coral Reef Divider Image 2 -->
-  <section class="w-full">
-    <Image
-      src={siteImages.homepage.coralReef2}
-      alt="Récif corallien"
-      class="w-full h-auto"
-      loading="lazy"
-      fallback={siteImages.fallback.hero}
-    />
+  <!-- Coral Reef Section 2 with Text -->
+  <section class="py-16 bg-light-beige">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <div class="grid md:grid-cols-2 gap-12 items-center animate-on-scroll">
+        <!-- Image -->
+        <div>
+          <Image
+            src={siteImages.homepage.coralReef2}
+            alt="Récif corallien"
+            class="w-full h-80 md:h-96 object-cover rounded-xl shadow-xl"
+            loading="lazy"
+            fallback={siteImages.fallback.hero}
+          />
+        </div>
+        <!-- Text -->
+        <div class="font-body text-gray-700 leading-relaxed space-y-4">
+          <h2 class="font-heading font-bold text-2xl md:text-3xl text-ocean-blue">
+            Notre vision
+          </h2>
+          <div class="text-primary-orange text-3xl">~~~</div>
+          <p class="text-lg font-medium text-ocean-blue">
+            Un Océan dont les Hommes vivent durablement et respectent toute forme de vie
+          </p>
+          <p>
+            Les récifs coralliens abritent plus de 25% de la vie marine mondiale, bien qu'ils ne couvrent que 1% des fonds océaniques. Ces écosystèmes fragiles sont essentiels à notre planète.
+          </p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Naissance de Melba&Co Section -->
@@ -134,6 +172,11 @@ import { siteImages } from '../config/images';
           <p class="text-xl font-heading font-bold text-primary-orange text-center pt-4">
             Tu me rejoins ?
           </p>
+          <div class="text-center pt-4">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfocGroCTOyaHb7bCkQD6U3wyMLmR40V1IbiR_5U4fWjsFrSw/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="inline-block bg-donate-red text-white px-6 py-3 rounded-lg font-body font-semibold hover:bg-red-700 transform hover:scale-105 transition-all shadow-lg">
+              REJOINDRE L'ASSOCIATION
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -275,15 +318,38 @@ import { siteImages } from '../config/images';
     </div>
   </section>
 
-  <!-- Coral Reef Divider Image 3 -->
-  <section class="w-full">
-    <Image
-      src={siteImages.homepage.coralReef3}
-      alt="Récif corallien"
-      class="w-full h-auto"
-      loading="lazy"
-      fallback={siteImages.fallback.hero}
-    />
+  <!-- Coral Reef Section 3 with Text -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <div class="grid md:grid-cols-2 gap-12 items-center animate-on-scroll">
+        <!-- Image -->
+        <div>
+          <Image
+            src={siteImages.homepage.coralReef3}
+            alt="Récif corallien"
+            class="w-full h-80 md:h-96 object-cover rounded-xl shadow-xl"
+            loading="lazy"
+            fallback={siteImages.fallback.hero}
+          />
+        </div>
+        <!-- Text -->
+        <div class="font-body text-gray-700 leading-relaxed space-y-4">
+          <h2 class="font-heading font-bold text-2xl md:text-3xl text-ocean-blue">
+            Agir ensemble
+          </h2>
+          <div class="text-primary-orange text-3xl">~~~</div>
+          <p class="text-lg">
+            Chaque geste compte pour préserver la beauté et la richesse de nos océans. Ensemble, nous pouvons faire la différence.
+          </p>
+          <p>
+            Protection de la biodiversité, gestion durable des ressources et restauration des milieux marins : nos trois domaines d'action pour un avenir meilleur.
+          </p>
+          <a href="/don" class="inline-block bg-donate-red text-white px-6 py-3 rounded-lg font-body font-semibold hover:bg-red-700 transform hover:scale-105 transition-all shadow-lg mt-2">
+            NOUS SOUTENIR
+          </a>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Action Areas Section -->
@@ -355,8 +421,8 @@ import { siteImages } from '../config/images';
         <a href="/don" class="inline-block bg-donate-red text-white px-10 py-4 rounded-lg font-body font-semibold text-lg hover:bg-red-700 transform hover:scale-105 transition-all shadow-xl">
           FAIRE UN DON
         </a>
-        <a href="/bulletin-adhesion.odt" download class="inline-block bg-white text-ocean-blue px-8 py-4 rounded-lg font-body font-semibold hover:bg-gray-100 transform hover:scale-105 transition-all shadow-xl">
-          TÉLÉCHARGER LE BULLETIN D'ADHÉSION
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfocGroCTOyaHb7bCkQD6U3wyMLmR40V1IbiR_5U4fWjsFrSw/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="inline-block bg-white text-ocean-blue px-8 py-4 rounded-lg font-body font-semibold hover:bg-gray-100 transform hover:scale-105 transition-all shadow-xl">
+          BULLETIN D'ADHÉSION
         </a>
       </div>
       <p class="font-body text-sm text-white/80 max-w-2xl mx-auto">
