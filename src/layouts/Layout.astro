@@ -54,28 +54,32 @@ const { title, description = "Planète Mer - Association de protection des océa
       }
     </style>
     
-    <script>
-      // Intersection Observer for scroll animations
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-      };
+    <script is:inline>
+      // Intersection Observer for scroll animations - runs independently
+      (function() {
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        };
 
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        }, observerOptions);
+
+        document.addEventListener('DOMContentLoaded', () => {
+          const animatedElements = document.querySelectorAll('.animate-on-scroll');
+          animatedElements.forEach(el => observer.observe(el));
         });
-      }, observerOptions);
+      })();
+    </script>
 
-      document.addEventListener('DOMContentLoaded', () => {
-        const animatedElements = document.querySelectorAll('.animate-on-scroll');
-        animatedElements.forEach(el => observer.observe(el));
-      });
-
+    <script is:inline>
       // Netlify Identity - auto-detect tokens and redirect after login
-      if (window.netlifyIdentity) {
+      if (typeof window.netlifyIdentity !== 'undefined' && window.netlifyIdentity) {
         window.netlifyIdentity.on('init', user => {
           // Auto-open widget for invite/recovery tokens after init
           const hash = window.location.hash;
