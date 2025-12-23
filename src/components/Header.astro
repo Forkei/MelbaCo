@@ -30,14 +30,21 @@ const currentPath = Astro.url.pathname;
         >
           Nos Missions
         </a>
-        <a 
-          href="/blog" 
+        <a
+          href="/blog"
           class={`text-white hover:text-primary-orange transition-colors font-body ${currentPath.startsWith('/blog') ? 'text-primary-orange' : ''}`}
         >
           Blog
         </a>
-        <a 
-          href="/don" 
+        <a
+          id="admin-link-desktop"
+          href="/admin"
+          class="hidden text-white hover:text-primary-orange transition-colors font-body"
+        >
+          Admin
+        </a>
+        <a
+          href="/don"
           class="bg-donate-red text-white px-6 py-3 rounded-md font-body font-semibold hover:bg-red-700 transform hover:scale-105 transition-all shadow-lg"
         >
           FAIRE UN DON
@@ -71,14 +78,21 @@ const currentPath = Astro.url.pathname;
         >
           Nos Missions
         </a>
-        <a 
-          href="/blog" 
+        <a
+          href="/blog"
           class={`text-white hover:text-primary-orange transition-colors font-body py-2 ${currentPath.startsWith('/blog') ? 'text-primary-orange' : ''}`}
         >
           Blog
         </a>
-        <a 
-          href="/don" 
+        <a
+          id="admin-link-mobile"
+          href="/admin"
+          class="hidden text-white hover:text-primary-orange transition-colors font-body py-2"
+        >
+          Admin
+        </a>
+        <a
+          href="/don"
           class="bg-donate-red text-white px-6 py-3 rounded-md font-body font-semibold text-center hover:bg-red-700 transition-colors"
         >
           FAIRE UN DON
@@ -95,4 +109,31 @@ const currentPath = Astro.url.pathname;
   mobileMenuButton?.addEventListener('click', () => {
     mobileMenu?.classList.toggle('hidden');
   });
+</script>
+
+<script is:inline>
+  // Show/hide admin links based on Netlify Identity login state
+  function updateAdminLinks(show) {
+    const desktopLink = document.getElementById('admin-link-desktop');
+    const mobileLink = document.getElementById('admin-link-mobile');
+    if (show) {
+      desktopLink?.classList.remove('hidden');
+      mobileLink?.classList.remove('hidden');
+    } else {
+      desktopLink?.classList.add('hidden');
+      mobileLink?.classList.add('hidden');
+    }
+  }
+
+  if (typeof netlifyIdentity !== 'undefined') {
+    netlifyIdentity.on('init', user => {
+      updateAdminLinks(!!user);
+    });
+    netlifyIdentity.on('login', () => {
+      updateAdminLinks(true);
+    });
+    netlifyIdentity.on('logout', () => {
+      updateAdminLinks(false);
+    });
+  }
 </script>
