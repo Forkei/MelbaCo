@@ -5,45 +5,41 @@ import { siteImages } from '../config/images';
 ---
 
 <Layout title="Accueil">
-  <!-- Hero Section with Image and Introduction -->
-  <section class="py-16 bg-white">
-    <div class="container mx-auto px-4 max-w-6xl">
-      <div class="grid md:grid-cols-2 gap-12 items-center animate-on-scroll">
-        <!-- Image -->
-        <div>
-          <Image
-            src={siteImages.homepage.coralReef1}
-            alt="Récif corallien"
-            class="w-full h-80 md:h-96 object-cover rounded-xl shadow-xl"
-            loading="eager"
-            fallback={siteImages.fallback.hero}
-          />
-        </div>
-        <!-- Text -->
-        <div class="font-body text-gray-700 leading-relaxed space-y-4">
-          <p class="uppercase tracking-wide text-primary-orange font-semibold text-sm">
-            Melba&Co est une association d'intérêt général
-          </p>
-          <h1 class="font-heading font-bold text-3xl md:text-4xl text-ocean-blue">
-            Protégeons Nos Océans
-          </h1>
-          <p class="text-lg">
-            Ensemble pour un avenir durable des écosystèmes marins. Notre mission : agir tous ensemble, pour retrouver un équilibre durable entre la vie marine et les activités humaines.
-          </p>
-          <p>
-            C'est bien l'enjeu du 21e siècle : concilier à la fois <strong class="text-ocean-blue">respect des équilibres naturels fondamentaux</strong> et <strong class="text-ocean-blue">développement économique et social</strong>.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4 mt-4">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfocGroCTOyaHb7bCkQD6U3wyMLmR40V1IbiR_5U4fWjsFrSw/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="inline-block bg-donate-red text-white px-6 py-3 rounded-lg font-body font-semibold hover:bg-red-700 transform hover:scale-105 transition-all shadow-lg">
-              REJOINDRE L'ASSOCIATION
-            </a>
-            <a href="#introduction" class="inline-block bg-primary-orange text-ocean-blue px-6 py-3 rounded-lg font-body font-semibold hover:bg-yellow-500 transform hover:scale-105 transition-all shadow-lg">
-              Découvrir notre mission
-            </a>
-          </div>
-        </div>
+  <!-- Hero Content - Dark blue section at top -->
+  <section class="py-16 bg-ocean-blue text-white text-center">
+    <div class="container mx-auto px-4 animate-fade-in">
+      <p class="uppercase tracking-wide text-primary-orange font-semibold text-sm mb-4">
+        Melba&Co est une association d'intérêt général
+      </p>
+      <h1 class="font-heading font-bold text-5xl md:text-7xl mb-6">
+        Protégeons Nos Océans
+      </h1>
+      <p class="font-body text-xl md:text-2xl mb-4 max-w-3xl mx-auto">
+        Ensemble pour un avenir durable des écosystèmes marins
+      </p>
+      <p class="font-body text-lg mb-8 max-w-3xl mx-auto text-white/90">
+        Notre mission : agir tous ensemble, pour retrouver un équilibre durable entre la vie marine et les activités humaines.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfocGroCTOyaHb7bCkQD6U3wyMLmR40V1IbiR_5U4fWjsFrSw/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="inline-block bg-donate-red text-white px-8 py-4 rounded-lg font-body font-semibold text-lg hover:bg-red-700 transform hover:scale-105 transition-all shadow-xl">
+          REJOINDRE L'ASSOCIATION
+        </a>
+        <a href="#introduction" class="inline-block bg-primary-orange text-ocean-blue px-8 py-4 rounded-lg font-body font-semibold text-lg hover:bg-yellow-500 transform hover:scale-105 transition-all shadow-xl">
+          Découvrir notre mission
+        </a>
       </div>
     </div>
+  </section>
+
+  <!-- Hero Image - Full width below -->
+  <section class="w-full">
+    <Image
+      src={siteImages.homepage.coralReef1}
+      alt="Récif corallien"
+      class="w-full h-auto"
+      loading="eager"
+      fallback={siteImages.fallback.hero}
+    />
   </section>
 
   <!-- Benjamin's Introduction Section -->
