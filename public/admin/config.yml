@@ -18,8 +18,8 @@ collections:
     fields:
       - { label: 'Titre', name: 'title', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'text' }
-      - { label: 'Date de publication', name: 'publishDate', widget: 'datetime' }
+      - { label: 'Date de publication', name: 'publishDate', widget: 'datetime', date_format: 'YYYY-MM-DD', time_format: false }
       - { label: 'Auteur', name: 'author', widget: 'string', default: 'Benjamin' }
       - { label: 'Image', name: 'image', widget: 'image', required: false }
       - { label: 'Tags', name: 'tags', widget: 'list', required: false }
-      - { label: 'Contenu', name: 'body', widget: 'markdown' }
+      - { label: 'Contenu', name: 'body', widget: 'markdown', required: false }
