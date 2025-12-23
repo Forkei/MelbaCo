@@ -76,13 +76,13 @@ const { title, description = "Planète Mer - Association de protection des océa
 
       // Netlify Identity - auto-detect tokens and redirect after login
       if (window.netlifyIdentity) {
-        // Auto-open widget for invite/recovery tokens
-        const hash = window.location.hash;
-        if (hash.includes('invite_token') || hash.includes('recovery_token') || hash.includes('confirmation_token')) {
-          window.netlifyIdentity.open();
-        }
-
         window.netlifyIdentity.on('init', user => {
+          // Auto-open widget for invite/recovery tokens after init
+          const hash = window.location.hash;
+          if (hash.includes('invite_token') || hash.includes('recovery_token') || hash.includes('confirmation_token')) {
+            window.netlifyIdentity.open();
+          }
+
           if (!user) {
             window.netlifyIdentity.on('login', () => {
               document.location.href = '/admin/';
