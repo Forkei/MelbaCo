@@ -80,6 +80,25 @@ const currentYear = new Date().getFullYear();
           </svg>
         </a>
       </div>
+
+      <!-- Hidden Admin Button -->
+      <div class="flex justify-center mt-4">
+        <button
+          id="admin-btn"
+          class="text-white/10 hover:text-white/40 text-xs transition-colors cursor-pointer"
+          aria-label="Admin"
+        >•</button>
+      </div>
     </div>
   </div>
 </footer>
+
+<script is:inline>
+  document.getElementById('admin-btn')?.addEventListener('click', function() {
+    if (typeof netlifyIdentity !== 'undefined') {
+      netlifyIdentity.open();
+    } else {
+      window.location.href = '/admin/';
+    }
+  });
+</script>
