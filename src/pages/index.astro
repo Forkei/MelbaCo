@@ -97,33 +97,30 @@ import { siteImages } from '../config/images';
   </section>
 
   <!-- Coral Reef Section 2 with Text -->
-  <section class="py-16 bg-light-beige">
-    <div class="container mx-auto px-4 max-w-6xl">
-      <div class="grid md:grid-cols-2 gap-12 items-center animate-on-scroll">
-        <!-- Image -->
-        <div>
-          <Image
-            src={siteImages.homepage.coralReef2}
-            alt="Récif corallien"
-            class="w-full h-80 md:h-96 object-cover rounded-xl shadow-xl"
-            loading="lazy"
-            fallback={siteImages.fallback.hero}
-          />
-        </div>
-        <!-- Text -->
-        <div class="font-body text-gray-700 leading-relaxed space-y-4">
-          <h2 class="font-heading font-bold text-2xl md:text-3xl text-ocean-blue">
-            Notre vision
-          </h2>
-          <div class="text-primary-orange text-3xl">~~~</div>
-          <p class="text-lg font-medium text-ocean-blue">
-            Un Océan dont les Hommes vivent durablement et respectent toute forme de vie
-          </p>
-          <p>
-            Les récifs coralliens abritent plus de 25% de la vie marine mondiale, bien qu'ils ne couvrent que 1% des fonds océaniques. Ces écosystèmes fragiles sont essentiels à notre planète.
-          </p>
-        </div>
+  <section class="bg-light-beige">
+    <div class="container mx-auto px-4 max-w-5xl py-16">
+      <div class="text-center animate-on-scroll">
+        <h2 class="font-heading font-bold text-3xl md:text-4xl text-ocean-blue mb-4">
+          Notre vision
+        </h2>
+        <div class="text-primary-orange text-3xl mb-6">~~~</div>
+        <p class="text-lg md:text-xl font-medium text-ocean-blue mb-4">
+          Un Océan dont les Hommes vivent durablement et respectent toute forme de vie
+        </p>
+        <p class="font-body text-gray-700 leading-relaxed max-w-3xl mx-auto">
+          Les récifs coralliens abritent plus de 25% de la vie marine mondiale, bien qu'ils ne couvrent que 1% des fonds océaniques. Ces écosystèmes fragiles sont essentiels à notre planète.
+        </p>
       </div>
+    </div>
+    <!-- Full Width Image -->
+    <div class="w-full">
+      <Image
+        src={siteImages.homepage.coralReef2}
+        alt="Récif corallien"
+        class="w-full h-auto"
+        loading="lazy"
+        fallback={siteImages.fallback.hero}
+      />
     </div>
   </section>
 
@@ -315,36 +312,33 @@ import { siteImages } from '../config/images';
   </section>
 
   <!-- Coral Reef Section 3 with Text -->
-  <section class="py-16 bg-white">
-    <div class="container mx-auto px-4 max-w-6xl">
-      <div class="grid md:grid-cols-2 gap-12 items-center animate-on-scroll">
-        <!-- Image -->
-        <div>
-          <Image
-            src={siteImages.homepage.coralReef3}
-            alt="Récif corallien"
-            class="w-full h-80 md:h-96 object-cover rounded-xl shadow-xl"
-            loading="lazy"
-            fallback={siteImages.fallback.hero}
-          />
-        </div>
-        <!-- Text -->
-        <div class="font-body text-gray-700 leading-relaxed space-y-4">
-          <h2 class="font-heading font-bold text-2xl md:text-3xl text-ocean-blue">
-            Agir ensemble
-          </h2>
-          <div class="text-primary-orange text-3xl">~~~</div>
-          <p class="text-lg">
-            Chaque geste compte pour préserver la beauté et la richesse de nos océans. Ensemble, nous pouvons faire la différence.
-          </p>
-          <p>
-            Protection de la biodiversité, gestion durable des ressources et restauration des milieux marins : nos trois domaines d'action pour un avenir meilleur.
-          </p>
-          <a href="/don" class="inline-block bg-donate-red text-white px-6 py-3 rounded-lg font-body font-semibold hover:bg-red-700 transform hover:scale-105 transition-all shadow-lg mt-2">
-            NOUS SOUTENIR
-          </a>
-        </div>
+  <section class="bg-white">
+    <div class="container mx-auto px-4 max-w-5xl py-16">
+      <div class="text-center animate-on-scroll">
+        <h2 class="font-heading font-bold text-3xl md:text-4xl text-ocean-blue mb-4">
+          Agir ensemble
+        </h2>
+        <div class="text-primary-orange text-3xl mb-6">~~~</div>
+        <p class="text-lg md:text-xl font-body text-gray-700 mb-4">
+          Chaque geste compte pour préserver la beauté et la richesse de nos océans. Ensemble, nous pouvons faire la différence.
+        </p>
+        <p class="font-body text-gray-700 leading-relaxed max-w-3xl mx-auto mb-6">
+          Protection de la biodiversité, gestion durable des ressources et restauration des milieux marins : nos trois domaines d'action pour un avenir meilleur.
+        </p>
+        <a href="/don" class="inline-block bg-donate-red text-white px-6 py-3 rounded-lg font-body font-semibold hover:bg-red-700 transform hover:scale-105 transition-all shadow-lg">
+          NOUS SOUTENIR
+        </a>
       </div>
+    </div>
+    <!-- Full Width Image -->
+    <div class="w-full">
+      <Image
+        src={siteImages.homepage.coralReef3}
+        alt="Récif corallien"
+        class="w-full h-auto"
+        loading="lazy"
+        fallback={siteImages.fallback.hero}
+      />
     </div>
   </section>
 
