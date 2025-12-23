@@ -120,15 +120,23 @@ const currentPath = Astro.url.pathname;
     }
   }
 
-  if (typeof netlifyIdentity !== 'undefined') {
-    netlifyIdentity.on('init', user => {
-      updateAdminLinks(!!user);
-    });
-    netlifyIdentity.on('login', () => {
-      updateAdminLinks(true);
-    });
-    netlifyIdentity.on('logout', () => {
-      updateAdminLinks(false);
-    });
+  function initAdminLinks() {
+    if (typeof netlifyIdentity !== 'undefined' && netlifyIdentity) {
+      netlifyIdentity.on('init', user => {
+        updateAdminLinks(!!user);
+      });
+      netlifyIdentity.on('login', () => {
+        updateAdminLinks(true);
+      });
+      netlifyIdentity.on('logout', () => {
+        updateAdminLinks(false);
+      });
+    } else {
+      // Widget not loaded yet, retry in 100ms
+      setTimeout(initAdminLinks, 100);
+    }
   }
+
+  // Start checking for identity widget
+  initAdminLinks();
 </script>

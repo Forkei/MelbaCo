@@ -35,8 +35,8 @@ export const siteImages = {
 
   // Images par défaut pour les blogs (si pas d'image spécifique)
   blog: {
-    defaultHero: '/images/uploads/blog-default.jpg', // Image par défaut pour les articles
-    defaultThumbnail: '/images/uploads/blog-thumb-default.jpg', // Vignette par défaut
+    defaultHero: '/images/uploads/coral-reef-1.jpg', // Image par défaut pour les articles
+    defaultThumbnail: '/images/uploads/coral-reef-1.jpg', // Vignette par défaut
   },
 
   // Images de fallback (si l'image n'existe pas)
