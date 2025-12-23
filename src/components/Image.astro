@@ -31,5 +31,6 @@ const imageSrc = isAbsoluteUrl ? src : src;
   loading={loading}
   width={width}
   height={height}
-  onerror={`this.onerror=null; this.src='${fallback}'`}
+  data-fallback={fallback}
+  onerror="this.onerror=null; this.src=this.dataset.fallback"
 />
